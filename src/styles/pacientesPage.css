@@ -1,0 +1,81 @@
+.pagePacientes {
+    display: grid;
+    grid-template-areas: "menuSection pageContent";
+    grid-template-columns: 1fr 5fr;
+    background-color: #cbd5e1;
+    svg {
+        grid-area: menuSection;
+    }
+    .pageContent {
+        grid-area: pageContent;
+        display: grid;
+        grid-template-areas: "titulo boton"
+                            "tabla tabla";
+        gap: 8px;
+        grid-template-columns: 6fr 2fr;
+        padding: 32px;
+        h2 {
+            grid-area: titulo;
+            font-size: 36px;
+        }
+        button {
+            grid-area: boton;
+            background-color: #585757;
+            color: #fff;
+            border-radius: 16px;
+            padding: 12px 16px;
+        }
+    }
+    .table {
+        grid-area: tabla;
+        background-color: #fff;
+        width: 100%;
+        margin: 30px 0;
+        padding: 0 16px;
+        border-radius: 16px;
+        max-height: 450px;
+        display: flex;
+        overflow-y: scroll;
+        position: relative;
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            thead th{
+                position: sticky;
+                top: 0;
+                z-index: 1;
+                background-color: #fff;
+            }
+            th {
+                padding: 14px 12px;
+            }
+            tr {
+                text-align: center;
+                font-size: 14px;
+                color: #585757;
+            }
+            tr:nth-child(1) {
+                border-radius: 16px;
+            }
+            tr:nth-child(odd) {
+                background-color: #d3d3d3;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            tr:nth-child(even) {
+                background-color: #fff;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            tr:nth-child(odd):hover {
+                background-color: #bdbdbd;
+            }
+            tr:nth-child(even):hover {
+                background-color: #dedcdc;
+            }
+            td {
+                padding: 14px 12px;
+            }
+        }
+    }
+}
