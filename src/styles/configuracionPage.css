@@ -1,0 +1,138 @@
+.pageConfiguracion {
+    display: grid;
+    grid-template-areas: "menuSection pageContent";
+    grid-template-columns: 1fr 5fr;
+    background-color: #cbd5e1;
+    svg {
+        grid-area: menuSection;
+    }
+    .pageContent {
+        grid-area: pageContent;
+        padding: 32px;
+        h2 {
+            font-size: 36px;
+            text-align: center;
+        }
+        .options {
+            display: grid;
+            padding: 36px;
+            grid-template-areas: "clinica dentroClinica";
+            gap: 42px;
+            .clinica {
+                grid-area: clinica;
+            }
+            .dentroClinica {
+                grid-area: dentroClinica;
+            }
+            div {
+                background-color: #ffffff;
+                border-radius: 16px;
+                place-content: center;
+                padding: 12px;
+                text-align: center;
+                justify-content: center;
+                align-content: center;
+                li {
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border-radius: 12px;
+                    font-size: 18px;
+                    padding: 12px;
+                }
+                li:hover {
+                    background-color: #f3f3f3;
+                }
+            }
+        }
+        .aseguradoras {
+            padding: 32px 0;
+            display: flex;
+            top: 0;
+            width: 80%;
+            min-height: 100vh;
+            position: absolute;
+            background-color: #cbd5e1;
+            flex-direction: column;
+            p {
+                font-size: 32px;
+                text-align: center;
+            }
+            .content {
+                margin: 16px 0;
+                display: grid;
+                grid-template-columns: 400px 1fr;
+                gap: 32px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        max-width: 400px;
+                        padding: 4px 8px;
+                        font-size: 14px;
+                        resize: none;
+                        border: 1px solid #585757;
+                        color: #585757;
+                    }
+                    button {
+                        background-color: #585757;
+                        color: #fff;
+                        max-width: 400px;
+                        border-radius: 16px;
+                        padding: 8px 12px;
+                        margin: 8px 0;
+                    }
+                }
+                .table {
+                    background-color: #ffffff;
+                    padding: 0 24px 18px 24px;
+                    border-radius: 12px;
+                    border-radius: 16px;
+                    height: 450px;
+                    display: flex;
+                    overflow-y: scroll;
+                    position: relative;
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                        thead th{
+                            position: sticky;
+                            top: 0;
+                            z-index: 1;
+                            background-color: #fff;
+                        }
+                        th {
+                            padding: 14px 12px;
+                        }
+                        tr {
+                            text-align: center;
+                            font-size: 14px;
+                            color: #585757;
+                        }
+                        tr:nth-child(1) {
+                            border-radius: 16px;
+                        }
+                        tr:nth-child(odd) {
+                            background-color: #d3d3d3;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                        }
+                        tr:nth-child(even) {
+                            background-color: #fff;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                        }
+                        tr:nth-child(odd):hover {
+                            background-color: #bdbdbd;
+                        }
+                        tr:nth-child(even):hover {
+                            background-color: #dedcdc;
+                        }
+                        td {
+                            padding: 14px 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
