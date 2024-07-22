@@ -22,8 +22,6 @@ export async function GET() {
     try {
       const data = await request.formData();
 
-      console.log(data)
-
       const results = await connDB.query("INSERT INTO aseguradoras SET ?" ,{
         nombreAseguradora: data.get("nombreAseguradora"),
       });

@@ -1,0 +1,122 @@
+.pagePacientes {
+    display: grid;
+    grid-template-areas: "menuSection pageContent";
+    grid-template-columns: 1fr 5fr;
+    background-color: #cbd5e1;
+    svg {
+        grid-area: menuSection;
+    }
+    .pageContent {
+        grid-area: pageContent;
+        
+        .botonGuardar {
+            grid-area: boton;
+            button {
+                grid-area: boton;
+                background-color: #585757;
+                color: #fff;
+                border-radius: 16px;
+                padding: 8px 12px;
+                margin: 8px 0;
+                width: 100%;
+                transition: all 0.3s ease;
+            }
+            button:hover{
+                background-color: #6f6f6f;
+            }
+        }
+        form {
+            display: grid;
+            grid-template-areas: "datos"
+                                "boton";
+            gap: 8px;
+            padding: 32px;
+            height: 100vh;
+        }
+        .submenu {
+            grid-area: submenu;
+            h2 {
+                font-size: 24px;
+                margin: 30px 0 80px 0;
+            }
+            
+        }
+        .expedienteMedico {
+            visibility: hidden;
+            h2 {
+                font-size: 24px;
+            }
+            grid-area: datos;
+            top: 0;
+            background-color: #cbd5e1;
+
+        }
+        .datos {
+            display: grid;
+            grid-area: datos;
+            overflow-y: scroll;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "nombre nombre"
+                                "fecha sexo"
+                                "email telefono"
+                                "dni rtn"
+                                "direccion direccion"
+                                "aseguradora poliza"
+                                "nombreContacto nombreContacto"
+                                "parentesco telefonoContacto";
+        div {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+        input, select, textarea {
+            padding: 4px 8px;
+            font-size: 14px;
+            resize: none;
+            border: 1px solid #585757;
+            color: #585757;
+        }
+        }
+        .nombre {
+            grid-area: nombre;
+        }
+        .fecha {
+            grid-area: fecha;
+        }
+        .sexo {
+            grid-area: sexo;
+        }
+        .email {
+            grid-area: email;
+        }
+        .telefono {
+            grid-area: telefono;
+        }
+        .dni {
+            grid-area: dni;
+        }
+        .rtn {
+            grid-area: rtn;
+        }
+        .direccion {
+            grid-area: direccion;
+        }
+        .aseguradora {
+            grid-area: aseguradora;
+        }
+        .poliza {
+            grid-area: poliza;
+        }
+        .nombreContacto {
+            grid-area: nombreContacto;
+        }
+        .parentesco {
+            grid-area: parentesco;
+        }
+        .telefonoContacto {
+            grid-area: telefonoContacto;
+        }
+        }
+        
+
+    }
+}

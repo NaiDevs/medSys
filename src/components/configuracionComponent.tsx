@@ -5,16 +5,6 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 
-async function loadAseguradoras() {
-    try {
-      const { data } = await axios.get("http://localhost:3000/api/aseguradora");
-      return data;
-    } catch (error) {
-      console.error("Error loading aseguradoras:", error);
-      return [];
-    }
-  }
-
 interface types {
     idAseguradora: number,
     nombreAseguradora: string
