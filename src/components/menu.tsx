@@ -16,7 +16,7 @@ export default function Menu() {
       <section className="menu">
         <h1>MedSys</h1>
         <ul>
-            <li><PacientesIcon /><a href="#">Pacientes</a></li>
+            <li><PacientesIcon /><a href="/pacientes">Pacientes</a></li>
             <li><HistoriaIcon /><a href="#">Historias Clinicas</a></li>
             <li><CitasIcon /><a href="#">Citas</a></li>
             <li><ReportesIcon /><a href="#">Medicamentos</a></li>

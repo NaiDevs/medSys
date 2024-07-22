@@ -3,7 +3,7 @@ import { connDB } from "@/libs/mysqlDB";
 
 export async function GET() {
     try {
-      const results = await connDB.query("SELECT * FROM pacientes ORDER BY `nombrePaciente` ASC;");
+      const results = await connDB.query("SELECT p.dniPaciente, p.nombrePaciente, TIMESTAMPDIFF(YEAR, p.fechaNacimientoPaciente, CURDATE()) AS edadPaciente, s.nombreSexo AS sexoPaciente, telefonoPaciente FROM `pacientes` p INNER JOIN `sexos` s on p.sexoPaciente = s.idSexo ORDER BY `nombrePaciente` ASC;");
       return NextResponse.json(results);
     } catch (error:any) {
       console.log(error);
